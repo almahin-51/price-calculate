@@ -1,0 +1,169 @@
+.App {
+  background-color: #212529;
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.App h1 {
+  margin: 0 auto;
+  padding: 40px 0;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 32px;
+  line-height: 38px;
+  color: #ffffff;
+  font-weight: 700;
+  font-family: "Poppins";
+  text-align: center;
+}
+
+/* Framework  */
+.home {
+  background-color: #ffffff;
+  width: 1226px;
+  margin: 0 90px;
+}
+
+.header-top {
+  padding: 0 90px;
+  border-bottom: 1px solid #999999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-top p {
+  font-size: 16px;
+  line-height: 19px;
+  color: #212529;
+  font-weight: 300;
+  font-family: "Poppins";
+}
+.header-top span {
+  color: #13a2e2;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.header-top svg {
+  font-size: 40px;
+  color: #3f3f3f;
+}
+
+.details {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.category h2 {
+  font-size: 20px;
+  line-height: 24px;
+  color: #212529;
+  font-weight: 700;
+  font-family: "Poppins";
+  text-align: center;
+  margin: 28px 0;
+}
+
+.card {
+  width: 416px;
+  height: 93px;
+  padding: 10px;
+  background-color: #ffffff;
+  filter: drop-shadow(-4.592px 5.283px 10.5px rgba(0, 0, 0, 0.06));
+  margin-bottom: 8px;
+  border: 2px solid #e8e8e8;
+}
+
+.card h4,
+p {
+  margin: 0;
+}
+
+.card p {
+  font-size: 16px;
+  line-height: 19px;
+  color: #3f3f3f;
+  font-weight: 300;
+  font-family: "Poppins";
+}
+
+.line {
+  display: block;
+  width: 1px;
+  background-color: #999999;
+}
+
+.pricing {
+  margin-top: 20px;
+}
+
+.pricing p {
+  margin: 28px 0;
+  font-size: 14px;
+  line-height: 24px;
+  color: #212529;
+  font-weight: 400;
+  font-family: "Poppins";
+  text-align: center;
+}
+
+.footer {
+  display: flex;
+  padding: 20px;
+}
+
+.progress-container {
+  max-width: 100%;
+  width: 190px;
+  height: 18px;
+  border-radius: 5px;
+  background-color: #e8e8e8;
+  margin: 0 10px;
+}
+
+:root {
+  --btn-color-active: #13a2e2;
+  --btn-color-disable: #e8e8e8;
+}
+
+.progress {
+  height: 12px;
+  border-radius: 5px;
+  width: 33.34%;
+  margin: 3px;
+  background-color: #13a2e2;
+}
+
+.footer button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.prev {
+  color: var(--btn-color-disable);
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 700;
+  font-family: "Poppins";
+  text-align: center;
+}
+
+.next {
+  color: var(--btn-color-active);
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 700;
+  font-family: "Poppins";
+  text-align: center;
+}
