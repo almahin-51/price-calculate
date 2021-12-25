@@ -1,15 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import { faEllipsisH } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Framework = () => {
+  const [width, setWidth] = useState(100 / 3);
+  const [Next, setNext] = useState(false);
+  const [Prev, setPrev] = useState(true);
+
+  const cards = document.querySelectorAll(".card");
+  console.log(cards.length);
+
+  const handleNext = () => {
+    const newWidth = width + 100 / 3;
+    setWidth(newWidth);
+    setPrev(false);
+    if (width > 66.66) {
+      setNext(true);
+    }
+  };
+
+  const handlePrev = () => {
+    const newWidth = width - 100 / 3;
+    setWidth(newWidth);
+    setNext(false);
+    if (width < (100 / 3) * 2) {
+      setPrev(true);
+    }
+  };
+
   return (
     <div className="home">
       <div className="header-top">
         <FontAwesomeIcon icon={faEllipsisH} />
         <p>
-          WANT TO DISCUSS YOUR PROJECT IN DETAIL?{" "}
-          <span>SCHEDULE A CALL HERE</span>
+          WANT TO DISCUSS YOUR PROJECT IN DETAIL?
+          <span> SCHEDULE A CALL HERE</span>
         </p>
         <FontAwesomeIcon icon={faEllipsisH} />
       </div>
@@ -57,6 +82,32 @@ const Framework = () => {
               quidem.
             </p>
           </div>
+
+          <div className="footer">
+            <button
+              className="btn prev"
+              onClick={handlePrev}
+              id="prev"
+              disabled={Prev}
+            >
+              Previous
+            </button>
+            <div className="progress-container">
+              <div
+                className="progress"
+                id="progress"
+                style={{ width: `${width}%` }}
+              ></div>
+            </div>
+            <button
+              className="btn next"
+              id="next"
+              onClick={handleNext}
+              disabled={Next}
+            >
+              Next
+            </button>
+          </div>
         </div>
 
         <div className="line"></div>
@@ -65,13 +116,6 @@ const Framework = () => {
             PLEASE INPUT ALL THE FIELDS TO <br /> SHOW ESTIMATED PRICE
           </p>
         </div>
-      </div>
-      <div className="footer">
-        <button className="prev">Previous</button>
-        <div className="progress-container">
-          <div className="progress"></div>
-        </div>
-        <button className="next active">Next</button>
       </div>
     </div>
   );
